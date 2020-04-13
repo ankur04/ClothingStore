@@ -27,6 +27,7 @@ namespace ClothingStore.Controllers
                 UserEntity userEntity = db.Users.FirstOrDefault(u => u.UserName == user.UserName && u.Password == user.Password);
                 if (userEntity != null)
                 {
+                    Session.Add("CurrentUser",userEntity);
                     return RedirectToAction("Index", "Sections");
                 }
             }

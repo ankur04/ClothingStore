@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,11 +41,11 @@
                     <li>@Html.ActionLink("Men", "Index", "Men")</li>
                     <li>@Html.ActionLink("Sneakers", "Index", "Sneakers")</li>
                     <li>@Html.ActionLink("Women", "Index", "Women")</li>
-                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
                     <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
                 </ul>
             </div>

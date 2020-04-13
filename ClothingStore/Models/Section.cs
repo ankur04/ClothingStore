@@ -10,7 +10,7 @@ namespace ClothingStore.Models
         public string Title { get; set; }
         public string ImageUrl { get; set; }
         public string LinkUrl { get; set; }
-        public int Id { get; set; }
+        public int id { get; set; }
 
 
     }

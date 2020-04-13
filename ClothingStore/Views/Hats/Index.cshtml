@@ -5,7 +5,9 @@
 }
 
 <h2>Hats</h2>
-
+<div id="myElem" class="alert alert-success">
+    <strong>Success!</strong> Added to cart.
+</div>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -35,11 +37,25 @@
             @Html.DisplayFor(modelItem => item.price)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            <span onclick="show()">
+                @Html.ActionLink("Add to Cart", "AddToCart", "Cart", new
+                {
+                    itemId = item.id,
+                    itemName = item.name,
+         itemImageUrl = item.imageUrl,
+                    itemPrice = item.price,
+                    from = "Hats"
+                }, null)
+        </span>
         </td>
     </tr>
 }
 
 </table>
+<script>
+    $("#myElem").hide();
+    function show() {
+        $("#myElem").show().delay(10000).fadeOut();
+    }
+
+</script>

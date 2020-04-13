@@ -1,0 +1,58 @@
+﻿@model ClothingStore.Models.Cart
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cart</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

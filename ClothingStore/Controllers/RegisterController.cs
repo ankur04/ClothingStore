@@ -30,6 +30,10 @@ namespace ClothingStore.Controllers
 
                 db.Users.Add(new UserEntity(user.UserName, user.Password));
                 db.SaveChanges();
+                UserEntity userEntity = new UserEntity();
+                userEntity.UserName = user.UserName;
+                userEntity.Password = user.Password;
+                Session.Add("CurrentUser", userEntity);
                 return RedirectToAction("Index","Sections");
             }
                
